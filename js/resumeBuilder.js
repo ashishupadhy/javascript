@@ -19,3 +19,13 @@ var bio={
   "skills":["awesomeness","programming"],
 }
 $("#main").append(JSON.stringify(bio));
+var work ={};
+work.position="course developer";
+work.employer = "udacity";
+work.years=0.3;
+var education = {};
+education ["name"]="mumbai university";
+education["years"]="2005-2006"
+education["city"]= "mumbai";
+$("#main").append (work["position"]);
+$("#main").append (education.name);
