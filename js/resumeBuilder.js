@@ -16,7 +16,8 @@ var bio={
     "mobile":"0123456789","email":"john@example.com","location":"india"
   },
   "welcomemessage":"shagagjglshlfka",
-  "skills":["awesomeness","programming"],
+  "skills":["awesomeness","programming","singing"],
+  "bioPic":"images/fry.jpg"
 }
 $("#header").append(JSON.stringify(bio));
 var work ={};
@@ -34,62 +35,82 @@ $("#main").append (education.name);
 var education={
   "schools":[
     {
-      "name":"Mumbai university",
-      "location":"Mumabi India",
+     "name":"Mumbai university",
+   "location":"Mumabi India",
       "degree":"Masters",
-      "majors":["CS"],
+     "majors":["CS"],
       "dates":2013,
-      "url":"http//example.com"
+     "url":"http//example.com"
     },
-    {
-      "name":"Gujrat university",
+   {
+     "name":"Gujrat university",
       "location":"Gujrat India",
-      "degree":"Masters",
+   "degree":"Masters",
       "majors":["CS"],
-      "dates":2016,
-      "url":"http//example.com"
-    }
-  ],
+    "dates":2016,
+     "url":"http//example.com"
+  }
+],
+
 
 "online courses":[
-  {
-  "title":"Javascript Syntax",
-  "school":"Udacity",
+ {
+ "title":"Javascript Syntax",
+ "school":"Udacity",
   "dates":"2017",
   "url":"http//udacity.com"
 }
-   ]
+  ]
 }
 
 
 
 var work={
   "jobs":[
-    {
-      "employeer":"Planet Express",
+   {
+    "employeer":"Planet Express",
       "title":"Delivery Boy",
       "dates":"January 3000-failure",
-      "description":"lorem epsun dhfjd moebd svey aftde ahsu awfst eddhdh sjeids"
-    },
+     "description":"lorem epsun dhfjd moebd svey aftde ahsu awfst eddhdh sjeids"
+},
     {
-      "employeer":"Panucii,s Pizza",
+     "employeer":"Panucii,s Pizza",
       "title":"Delivery Boy",
-      "dates":"1998 -December 31,1999",
-      "description":"lorem epsun dhfjd moebd svey aftde ahsu awfst eddhdh sjeids"
-    }
+     "dates":"1998 -December 31,1999",
+     "description":"lorem epsun dhfjd moebd svey aftde ahsu awfst eddhdh sjeids"
+  }
   ]
 }
 
 var projects={
   "projects":[
-  {
-    "title":"Sample Project 1",
+ {
+  "title":"Sample Project 1",
     "dates":"2014",
-    "Description":"Lorem epsum shsji ahsgg sftqtas.",
-    images:[
+   "Description":"Lorem epsum shsji ahsgg sftqtas.",
+   "images":[
       "http//husidp.com",
-      "http//jdhd.in"
+     "http//jdhd.in"
     ]
   }
 ]
 }
+
+if ( bio.skills.length > 0){
+  $("#header").append(HTMLskillsStart);
+  var formattedSkill=HTMLskills.replace("%data%",bio.skills[0]);
+  $("#skills").append(formattedSkill);
+  formattedSkill=HTMsLskislls.replace("%data%",bio.skills[1]);
+  $("#skills").append(formattedSkill);
+  formattedSkill=HTMLskills.replace("%data%",bio.skills[2]);
+  $("skills").append(formattedSkill);
+
+}
+//for (job in work.jobs){
+//  $("#workExperience").append(HTMLworkStart);
+  //var formattedEmployer = HTMLworkEmployer.replace
+//  ("%data%", work.jobs[job].employer);
+  //var formattedTitle=HTMLworkTitle.replace("%data%",work.jobs[job].title);
+  //var formattedEmployerTitle = formattedEmployer +  formattedTitle;
+  //$(".work-entry:last").append(formattedEmployerTitle);
+//}
