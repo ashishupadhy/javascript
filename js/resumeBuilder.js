@@ -106,6 +106,7 @@ if ( bio.skills.length > 0){
   $("skills").append(formattedSkill);
 
 }
+function displayWork(){
 for (job in work.jobs){
 $("#workExperience").append(HTMLworkStart);
   var formattedEmployer = HTMLworkEmployer.replace
@@ -113,6 +114,20 @@ $("#workExperience").append(HTMLworkStart);
   var formattedTitle=HTMLworkTitle.replace("%data%",work.jobs[job].title);
   var formattedEmployerTitle = formattedEmployer +  formattedTitle;
   $(".work-entry:last").append(formattedEmployerTitle);
-  var formattedDates=HTMLworkDescription.replace("%data%",work.jobs[job].descriptioon);
+  var formattedDates=HTMLworkDates.replace("%data%",work.jobs[job].dates);
+  $(".work-entry:last").append(formattedDates);
+
+  var formattedDescription=HTMLworkDescription.replace("%data%",work.jobs[job].description);
   $(".work-entry:last").append(formattedDescription);
+
 }
+}
+displayWork();
+
+$(document).click(function(loc){
+  var x=loc.pageX;
+  var y=loc.pageY;
+  logClicks(x,y);
+
+
+});
