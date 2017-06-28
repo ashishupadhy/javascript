@@ -1,5 +1,5 @@
 $("#main").append(["Ashish"]);
-var formattedName= HTMLheaderName.replace("%data%","ashish");
+var formattedName= HTMLheaderName.replace("%data%","Ashish");
 
 
 var formattedRole= HTMLheaderRole.replace("%data%","web developer");
@@ -10,15 +10,15 @@ $("#main").append(skills);
 $("#main").append(skills[0]);
 $("#main").append(skills.lenght);
 var bio={
-  "name":"ashish",
-  "role":"webdeveloper",
+ "name":"ashish",
+ "role":"webdeveloper",
   "contacts":{
     "mobile":"0123456789","email":"john@example.com","location":"india"
   },
   "welcomemessage":"shagagjglshlfka",
   "skills":["awesomeness","programming"],
 }
-$("#main").append(JSON.stringify(bio));
+$("#header").append(JSON.stringify(bio));
 var work ={};
 work.position="course developer";
 work.employer = "udacity";
@@ -50,13 +50,17 @@ var education={
       "url":"http//example.com"
     }
   ],
-"online courses":[{
+
+"online courses":[
+  {
   "title":"Javascript Syntax",
   "school":"Udacity",
   "dates":"2017",
   "url":"http//udacity.com"
-}]
 }
+   ]
+}
+
 
 
 var work={
@@ -75,6 +79,7 @@ var work={
     }
   ]
 }
+
 var projects={
   "projects":[
   {
